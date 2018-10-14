@@ -9,17 +9,14 @@ def joystickUp(event):
         r = requests.post("https://maker.ifttt.com/trigger/front_door_open/with/key/cyoRXyxxe34BYNYCyvcW7y")
     
 def joystickDown(event):
-    
     if event.action == ACTION_RELEASED:
         r = requests.post("https://maker.ifttt.com/trigger/front_door_close/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
 def joystickLeft(event):
-    
     if event.action == ACTION_RELEASED:
         r = requests.post("https://maker.ifttt.com/trigger/back_door_open/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
 def joystickRight(event):
-    
     if event.action == ACTION_RELEASED:
         r = requests.post("https://maker.ifttt.com/trigger/back_door_close/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
