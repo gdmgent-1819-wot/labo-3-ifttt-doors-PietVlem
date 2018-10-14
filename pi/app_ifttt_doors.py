@@ -6,22 +6,22 @@ sensehat = SenseHat()
 
 def joystickUp(event):
     if event.action == ACTION_RELEASED:
-        r = requests.post("https://maker.ifttt.com/trigger/front_door_opened/with/key/gT3jmnxkbXltZXqq7UhWFERRtyyZ6Ddru90SFtB1rya?")
+        r = requests.post("https://maker.ifttt.com/trigger/front_door_open/with/key/cyoRXyxxe34BYNYCyvcW7y")
     
 def joystickDown(event):
     
     if event.action == ACTION_RELEASED:
-        r = requests.post("https://maker.ifttt.com/trigger/front_door_closed/with/key/gT3jmnxkbXltZXqq7UhWFERRtyyZ6Ddru90SFtB1rya?")
+        r = requests.post("https://maker.ifttt.com/trigger/front_door_close/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
 def joystickLeft(event):
     
     if event.action == ACTION_RELEASED:
-        r = requests.post("https://maker.ifttt.com/trigger/back_door_opened/with/key/gT3jmnxkbXltZXqq7UhWFERRtyyZ6Ddru90SFtB1rya?")
+        r = requests.post("https://maker.ifttt.com/trigger/back_door_open/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
 def joystickRight(event):
     
     if event.action == ACTION_RELEASED:
-        r = requests.post("https://maker.ifttt.com/trigger/back_door_closed/with/key/gT3jmnxkbXltZXqq7UhWFERRtyyZ6Ddru90SFtB1rya?")
+        r = requests.post("https://maker.ifttt.com/trigger/back_door_close/with/key/cyoRXyxxe34BYNYCyvcW7y")
 
 def joystickMiddle(event):
     if event.action == ACTION_RELEASED:
@@ -30,7 +30,7 @@ def joystickMiddle(event):
      hum = "{}%".format(sensehat.get_humidity())
      press = "{}.Ombar".format(sensehat.get_pressure())
 
-     r = requests.post("https://maker.ifttt.com/trigger/sensors/with/key/gT3jmnxkbXltZXqq7UhWFERRtyyZ6Ddru90SFtB1rya?",
+     r = requests.post("https://maker.ifttt.com/trigger/sensors_val/with/key/cyoRXyxxe34BYNYCyvcW7y",
                      data = {
                        "value1" : temp,
                        "value2" : hum,
